@@ -44,3 +44,12 @@ P_final = currentP[999]
 K = A @ P_final @ B.T @ np.linalg.inv(R + B.T @ P_final @ B)
 
 print(K)
+
+""""
+ Now we find the solution for the differential equation of a closed loop system to determine the stability of the system considering given input
+
+"""""
+
+StabM = A - B @ K
+
+print(f'Closed loop system is {StabM} with eigenvalues {np.linalg.eig(StabM)}')
