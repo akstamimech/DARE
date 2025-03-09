@@ -39,4 +39,8 @@ for n in range(1000):
 
 print(currentP[999])
 
+P_final = currentP[999]
 
+K = A @ P_final @ B.T @ np.linalg.inv(R + B.T @ P_final @ B)
+
+print(K)
